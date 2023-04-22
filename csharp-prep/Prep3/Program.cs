@@ -29,8 +29,8 @@ class Program
             {
                 Console.WriteLine("You guessed it!");
             }
-
-        }                    
+        }
+        Console.WriteLine("Thank you for playing the game.  Goodbye "); //Message for end of game.                   
     }
 }
 
@@ -41,5 +41,3 @@ class Program
 //print(f'It took {guess_count} guesses. ') // Stretch challenge 1.
         
 //keep_playing = input('Would you like to play again (yes/no)? ') //Stretch challenge 2
-    
-//Console.WriteLine('Thank you for playing the game.  Goodbye. ') //Message for end of the game.
