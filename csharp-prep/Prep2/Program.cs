@@ -6,37 +6,79 @@ class Program
     {
         Console.Write("What is your grade percentage? ");
         string answer = Console.ReadLine();
-        int percentage = int.Parse(answer);
 
-        string grade = "";
+        int percentage = int.Parse(answer);
+        string letter = "";
 
         if (percentage >= 90)
         {
-            grade = "A";
+            if (percentage < 93)
+            {
+                letter = "A-";
+            }
+            else
+            {
+                letter = "A";
+            }
         }
-        else if (percentage >= 80)
+        if (percentage >= 80)
         {
-            grade = "B";
+            if (percentage >= 87)
+            {
+                letter = "B+";
+            }
+            else if (percentage < 83)
+            {
+                letter = "B-";
+            }
+            else
+            {
+                letter = "B";
+            }
         }
         else if (percentage >= 70)
         {
-            grade = "C";
+            if (percentage >= 77)
+            {
+                letter = "C+";
+            }
+            else if (percentage < 73)
+            {
+                letter = "C-";
+            }
+            else
+            {
+                letter = "C";
+            }
         }
         else if (percentage >= 60)
         {
-            grade = "D";
+            if (percentage >= 67)
+            {
+                letter = "D+";
+            }
+            else if (percentage < 63)
+            {
+                letter = "D-";
+            }
+            else
+            {
+                letter = "D";
+            }
         }
         else
         {
-            grade = "F";
+            letter = "F";
         }
-        Console.WriteLine($"Your grade is: {grade}");
+        Console.WriteLine($"Your grade is: {letter}");
 
         if (percentage >= 70)
         {
             Console.WriteLine("Congratulations!  You have a passing grade.");
         }
         else
+        {
             Console.WriteLine("That is ok try harder and do better next time.");
+        }    
     }
 }
