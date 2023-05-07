@@ -37,11 +37,17 @@ class Program //A class is just a template and becomes useful when an instance i
             }
             else if (menuUserinput == 3)
             {
-                journal.SaveToCSV();
+                Console.WriteLine("Enter the filename to save the journal to:");
+                string fileName = Console.ReadLine();
+                journal.SaveToCSV(fileName);
+                Console.WriteLine($"Journal saved to {fileName}.");
             }
             else if (menuUserinput == 4)
             {
-                journal.LoadFromCSV();
+                Console.WriteLine("Enter the filename to load the journal from:");
+                string fileName = Console.ReadLine();
+                journal.LoadFromCSV(fileName);
+                Console.WriteLine($"Journal loaded from {fileName}.");
             }
         }
         if (menuUserinput == 5)

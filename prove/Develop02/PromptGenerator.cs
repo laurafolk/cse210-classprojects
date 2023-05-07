@@ -1,5 +1,6 @@
 using System;
-
+using System.Collections.Generic;
+using System.IO;
 class PromptGenerator
 {
     List<string> prompts;
@@ -19,7 +20,7 @@ class PromptGenerator
     public string GetRandomPrompt()
     {
         Random random = new Random();
-        int index = random.Next(0, 4);
+        int index = random.Next(0, prompts.Count);
         return prompts[index];
     }
 }
