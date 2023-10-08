@@ -18,7 +18,7 @@ class Journal
     string date = Console.ReadLine();
 
     Console.WriteLine("Choose a prompt:");
-    //PromptGenerator promptGenerator = new PromptGenerator();
+    PromptGenerator promptGenerator = new PromptGenerator();
     string prompt = promptGenerator.GetRandomPrompt();
     Console.WriteLine(prompt);
 
@@ -46,17 +46,17 @@ class Journal
         {
             records.Add(entry.GetEntryAsCSV());   
         }
-        //File.WriteAllLines(fileName, records);
+        File.WriteAllLines(fileName, records);
         Console.WriteLine("Name of file to save?");
-        //string _fileName = Console.ReadLine();
+        string _fileName = Console.ReadLine();
 
         File.WriteAllLines(fileName, records);
     }
 
     public void LoadFromCSV(string fileName)
     {
-        //Console.WriteLine("Name of file to load?");
-        //string _fileName = Console.ReadLine();
+        Console.WriteLine("Name of file to load?");
+        string _fileName = Console.ReadLine();
         entries.Clear(); // Add this line to clear existing entries before loading from the file
 
         List<string> records = File.ReadAllLines(fileName).ToList();
